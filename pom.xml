@@ -10,7 +10,7 @@
     <properties>
         <version.com.h2database>1.4.196</version.com.h2database>
         <version.junit>4.12</version.junit>
-        <version.org.hibernate>5.2.12.Final</version.org.hibernate>
+        <version.org.hibernate>5.3.0.Final</version.org.hibernate>
         <version.org.log4j>1.2.17</version.org.log4j>
         <modules.dir>${project.build.directory}/modules</modules.dir>
     </properties>
@@ -18,14 +18,10 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <!-- Module: java.transaction -->
                 <groupId>org.jboss.spec.javax.transaction</groupId>
                 <artifactId>jboss-transaction-api_1.2_spec</artifactId>
                 <version>2.0.0.Alpha1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.javassist</groupId>
-                <artifactId>javassist</artifactId>
-                <version>3.22.0-GA</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -128,7 +124,7 @@
                                 <artifactItem>
                                     <groupId>net.bytebuddy</groupId>
                                     <artifactId>byte-buddy</artifactId>
-                                    <version>1.7.9</version>
+                                    <version>1.8.0</version>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
@@ -149,8 +145,9 @@
                             <modules>
                                 <module>
                                     <artifact>
-                                        <groupId>org.hibernate.javax.persistence</groupId>
-                                        <artifactId>hibernate-jpa-2.1-api</artifactId>
+                                        <groupId>javax.persistence</groupId>
+                                        <artifactId>javax.persistence-api</artifactId>
+                                        <version>2.2</version>
                                     </artifact>
                                     <moduleInfo>
                                         <name>java.persistence</name>
