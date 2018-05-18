@@ -1,5 +1,5 @@
 module com.example {
     requires java.persistence;
-    requires hibernate.core;
-    opens com.example to hibernate.core;
+    requires org.hibernate.orm.core;
+    opens com.example to org.hibernate.orm.core;
 }
